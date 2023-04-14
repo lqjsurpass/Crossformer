@@ -1,0 +1,1 @@
+--data ETTh1 --in_len 168 --out_len 24 --seg_len 6 --learning_rate 1e-4 --itr 5
