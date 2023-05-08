@@ -1,4 +1,4 @@
-from data.data_loader import Dataset_MTS
+from data.data_loader import Dataset_MTS,Dataset_PHM2
 from cross_exp.exp_basic import Exp_Basic
 from cross_models.cross_former import Crossformer
 
@@ -53,12 +53,18 @@ class Exp_crossformer(Exp_Basic):
             shuffle_flag = False; drop_last = False; batch_size = args.batch_size;
         else:
             shuffle_flag = True; drop_last = False; batch_size = args.batch_size;
-        data_set = Dataset_MTS(
+        # data_set = Dataset_MTS(
+        #     root_path=args.root_path,
+        #     data_path=args.data_path,
+        #     flag=flag,
+        #     size=[args.in_len, args.out_len],
+        #     data_split = args.data_split,
+        # )
+        data_set = Dataset_PHM2(
             root_path=args.root_path,
             data_path=args.data_path,
             flag=flag,
-            size=[args.in_len, args.out_len],  
-            data_split = args.data_split,
+            size=[args.in_len, args.out_len],
         )
 
         print(flag, len(data_set))

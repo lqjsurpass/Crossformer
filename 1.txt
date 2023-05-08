@@ -1,1 +1,8 @@
+数据集生成 在rnn_in_foreccasting_tool_wear-master 里面
+getData.py
+
+self.tool_wear_data = a.get_tool_wear_data1  这句改成 self.tool_wear_data = a.get_tool_wear_data 则是训练集
+get_tool_wear_data1 是测试集
+
 --data ETTh1 --in_len 168 --out_len 24 --seg_len 6 --learning_rate 1e-4 --itr 5
+--root_path ./data/PHM --data PHM --in_len 10 --out_len 10 --data_dim 1  --seg_len 3 --learning_rate 1e-4 --itr 5
